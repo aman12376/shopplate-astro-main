@@ -52,5 +52,5 @@ adapter: node({ mode: 'standalone' }),
     extendDefaultPlugins: true,
   },
 
-  adapter: vercel(),
+  
 });
