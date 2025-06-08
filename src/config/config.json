@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Pyromo CottonBox",
+    "base_url": "http://pyromocottonbox.in/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_darkmode": "/images/logo-darkmode.png",
+    "logo_width": "150",
+    "logo_height": "140",
+    "logo_text": "Pyromo CottonBox"
+  },
+
+  "settings": {
+    "search": true,
+    "account": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Designed And Developed by [Technohorse]"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": ""
+  },
+
+  "metadata": {
+    "meta_author": "Pyromo CottonBox",
+    "meta_image": "/images/og-image.png",
+    "meta_description": ""
+  },
+
+  "shopify": {
+    "currencySymbol": "",
+    "currencyCode": "BDT",
+    "collections": {
+      "hero_slider": "pyromo-homepage-carousel",
+      "featured_products": "featured-products"
+    }
+  }
+}

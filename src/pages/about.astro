@@ -1,0 +1,118 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Accordion from "@/functional-components/Accordion";
+import Testimonials from "@/functional-components/Testimonials";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import PageHeader from "@/partials/PageHeader.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+import { FaBoxOpen, FaHeadset, FaRegCheckCircle } from "react-icons/fa";
+
+const about = (await getEntry("about", "-index")) as CollectionEntry<"about">;
+
+const {
+  title,
+  meta_title,
+  description,
+  image,
+  about_us,
+  faq_section_title,
+  button,
+  faq_section_subtitle,
+  faqs,
+  testimonials_section_enable,
+  testimonials_section_title,
+  testimonials,
+  staff_section_enable,
+  staff,
+} = about.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PageHeader title={title} />
+
+  <section>
+    <div class="container">
+      {
+        about_us?.map((section, index) => (
+          <div class={`lg:flex gap-8 mt-14 lg:mt-28`}>
+            {index % 2 === 0 ? (
+              <>
+                <ImageMod
+                  class="rounded-md mx-auto"
+                  src={section?.image!}
+                  width={536}
+                  height={449}
+                  alt={section?.title}
+                />
+                <div class="mt-10 lg:mt-0">
+                  <h2>{section?.title}</h2>
+                  <p
+                    class="mt-4 text-text-light dark:text-darkmode-text-light leading-7"
+                    set:html={markdownify(section?.content)}
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <h2>{section.title}</h2>
+                  <p
+                    class="mt-4 text-text-light dark:text-darkmode-text-light leading-7"
+                    set:html={markdownify(section.content)}
+                  />
+                </div>
+                <ImageMod
+                  class="rounded-md mx-auto mt-10 lg:mt-0"
+                  src={section.image}
+                  width={536}
+                  height={449}
+                  alt={section.title}
+                />
+              </>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div
+        class="bg-light px-7 lg:px-32 py-20 dark:bg-darkmode-light mb-14 xl:mb-28 rounded-md"
+      >
+        <div class="row">
+          <div class="md:col-5 mx-auto space-y-5 mb-10 md:mb-0">
+            <h1 set:html={markdownify(faq_section_title!)} />
+            <p
+              set:html={markdownify(faq_section_subtitle!)}
+              class="md:text-lg"
+            />
+
+            {
+              button?.enable && (
+                <a
+                  class="btn btn-sm md:btn-lg btn-primary font-medium"
+                  href={button.link}
+                >
+                  {button.label}
+                </a>
+              )
+            }
+          </div>
+
+          <div class="md:col-7">
+            <Accordion client:load faqs={faqs} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
