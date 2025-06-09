@@ -47,6 +47,13 @@ product delivered does not meet the agreed specifications.
 Returns are generally not accepted unless the products are defective or not as per the
 agreed specifications.
 
+#### Delivery Time
+
+- Default shipping is via **Delhivery Logistics**. To ship via logistics of your choice, please contact our support team.
+- Orders are dispatched on **Mondays through Fridays**, excluding weekends and public holidays.
+- **In-stock items** are dispatched within **24 to 48 hours**. The time it takes for your order to be dispatched does not include the time it takes for the logistics service provider to deliver it to you.
+- **Delivery time** is **3–4 business days**.
+
 #### Contact
 For any concerns regarding cancellations or refunds, please contact us at info@pyromocotonbox.in.
 
