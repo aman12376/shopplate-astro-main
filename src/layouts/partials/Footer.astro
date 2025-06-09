@@ -17,11 +17,11 @@ export interface ISocial {
 <footer class="bg-light dark:bg-darkmode-light">
   <div class="container">
     <div
-      class="flex flex-col md:flex-row justify-between items-center py-10 md:pt-20 md:pb-14"
+      class="grid grid-cols-1 md:grid-cols-4 gap-8 py-10 py-10 md:pt-20 md:pb-14"
     >
-      <Logo />
 
-      <ul class="flex gap-x-4 lg:gap-x-10 my-3">
+
+      <!-- <ul class="flex gap-x-4 lg:gap-x-10 my-3">
         {
           menu.footer.map((menu) => (
             <li class="footer-link">
@@ -29,9 +29,15 @@ export interface ISocial {
             </li>
           ))
         }
-      </ul>
+      </ul> -->
+ <div style="text-align: center;">
+        <Logo/>
+        <p >
+          Welcome to Pyromo CottonBox Pvt Ltd, leading manufacturers of superior corrugated boxes since 2019. We offer the products in all shapes and sizes.
+        </p>
+      </div>
 
-      {/* social share */}
+      <!-- {/* social share */}
       <ul class="social-icons social-icons-footer">
         {
           social?.main.map((social: ISocial) => (
@@ -48,7 +54,37 @@ export interface ISocial {
             </li>
           ))
         }
-      </ul>
+      </ul> -->
+
+
+      <!-- Column 2: Menu -->
+      <div style="text-align: center;">
+        <h4 class="font-bold mb-3">MENU</h4>
+        <ul class="space-y-1">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT US</a></li>
+          <li><a href="/products">PRODUCTS</a></li>
+          <li><a href="/contact">CONTACT US</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Quick Links -->
+      <div style="text-align: center;">
+        <h4 class="font-bold mb-3">QUICK LINKS</h4>
+        <ul class="space-y-1">
+          <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
+          <li><a href="/terms-and-conditions">TERMS AND CONDITIONS</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div style="text-align: center;">
+        <h4 class="font-bold mb-3">GET IN TOUCH</h4>
+        <p>Address: No. 45/20, Mookathal Street, Perambur Purasawalkam, Vepery, Chennai 600007</p>
+        <p>Contact: +91 8825403543</p>
+        <p>Email: <a href="mailto:info@pyromocottonbox.in">info@pyromocottonbox.in</a></p>
+      </div>
+    </div>
     </div>
 
     <div class="border-t border-border py-5 dark:border-darkmode-border">

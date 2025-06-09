@@ -16,7 +16,7 @@ export default defineConfig({
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   output: "server",
-adapter: node({ mode: 'standalone' }),
+  adapter: node({ mode: 'standalone' }),
   vite: { plugins: [tailwindcss()] },
   integrations: [
     react(),
@@ -52,5 +52,5 @@ adapter: node({ mode: 'standalone' }),
     extendDefaultPlugins: true,
   },
 
-  
+
 });
