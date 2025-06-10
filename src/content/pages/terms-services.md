@@ -42,6 +42,7 @@ cancellations may not be accepted due to the commencement of production.
 #### Refunds
 Refunds are considered on a case-by-case basis, primarily in situations where the
 product delivered does not meet the agreed specifications.
+Refunds will be initiated within 7-10 days if it's comes under our terms and conditions.
 
 #### Return of Goods
 Returns are generally not accepted unless the products are defective or not as per the
